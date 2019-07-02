@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,109 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Carfax_Vehicles" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uuF-ed-azu">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="180" id="Poz-kz-Y8m" customClass="CarTableViewCell" customModule="Carfax_Vehicles" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="180"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Poz-kz-Y8m" id="5ud-Ed-ooO">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="179.66666666666666"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8JI-cU-K7H">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="97.666666666666671"/>
+                                                    <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2014 Acura ILX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owm-kk-YKA">
+                                                    <rect key="frame" x="15" y="105" width="345" height="15.666666666666671"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="CTS-FP-YCz">
+                                                    <rect key="frame" x="15" y="128" width="345" height="15.666666666666657"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$28,495" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ctP-kY-pbq">
+                                                            <rect key="frame" x="0.0" y="0.0" width="89.666666666666671" height="15.666666666666666"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100k Mi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sHe-xF-CH2">
+                                                            <rect key="frame" x="89.666666666666686" y="0.0" width="78" height="15.666666666666666"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fredricksburg, VA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kB7-rb-OaC">
+                                                            <rect key="frame" x="167.66666666666663" y="0.0" width="177.33333333333337" height="15.666666666666666"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x3m-vp-IeJ">
+                                                    <rect key="frame" x="15" y="147.66666666666666" width="345" height="28"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <state key="normal" title="(714)979-3030"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="8JI-cU-K7H" firstAttribute="leading" secondItem="5ud-Ed-ooO" secondAttribute="leading" id="1b7-9k-34l"/>
+                                                <constraint firstAttribute="trailing" secondItem="CTS-FP-YCz" secondAttribute="trailing" constant="15" id="3cR-za-xK2"/>
+                                                <constraint firstItem="x3m-vp-IeJ" firstAttribute="top" secondItem="CTS-FP-YCz" secondAttribute="bottom" constant="4" id="5dC-gV-odO"/>
+                                                <constraint firstAttribute="trailing" secondItem="8JI-cU-K7H" secondAttribute="trailing" id="7NL-Xw-5sE"/>
+                                                <constraint firstItem="owm-kk-YKA" firstAttribute="top" secondItem="8JI-cU-K7H" secondAttribute="bottom" constant="7.3300000000000001" id="HHt-fB-1Jq"/>
+                                                <constraint firstAttribute="bottom" secondItem="x3m-vp-IeJ" secondAttribute="bottom" constant="4" id="SF5-YB-iAF"/>
+                                                <constraint firstItem="8JI-cU-K7H" firstAttribute="top" secondItem="5ud-Ed-ooO" secondAttribute="top" id="T0S-km-kAb"/>
+                                                <constraint firstItem="CTS-FP-YCz" firstAttribute="leading" secondItem="5ud-Ed-ooO" secondAttribute="leading" constant="15" id="XBB-uh-jGa"/>
+                                                <constraint firstItem="CTS-FP-YCz" firstAttribute="top" secondItem="owm-kk-YKA" secondAttribute="bottom" constant="7.3333333333333286" id="hmP-oz-d8g"/>
+                                                <constraint firstItem="x3m-vp-IeJ" firstAttribute="leading" secondItem="5ud-Ed-ooO" secondAttribute="leading" constant="15" id="kOd-sE-w2O"/>
+                                                <constraint firstItem="owm-kk-YKA" firstAttribute="leading" secondItem="5ud-Ed-ooO" secondAttribute="leading" constant="15" id="o0V-4H-CSQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="owm-kk-YKA" secondAttribute="trailing" constant="15" id="qxB-vh-RMp"/>
+                                                <constraint firstAttribute="trailing" secondItem="x3m-vp-IeJ" secondAttribute="trailing" constant="15" id="tBi-3c-QbJ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="carImageView" destination="8JI-cU-K7H" id="sfn-qs-qQj"/>
+                                            <outlet property="carLocation" destination="kB7-rb-OaC" id="WQV-pD-CY2"/>
+                                            <outlet property="carMileage" destination="sHe-xF-CH2" id="7t9-vy-lVB"/>
+                                            <outlet property="carName" destination="owm-kk-YKA" id="zyl-hm-ayg"/>
+                                            <outlet property="carPrice" destination="ctP-kY-pbq" id="Ih0-UR-sZc"/>
+                                            <outlet property="phoneNumberButton" destination="x3m-vp-IeJ" id="h4E-cT-BuZ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="wjn-me-l5F"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="vv4-mT-yaA"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uuF-ed-azu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6d2-Li-ocy"/>
+                            <constraint firstAttribute="trailing" secondItem="uuF-ed-azu" secondAttribute="trailing" id="o0V-5S-L2N"/>
+                            <constraint firstItem="uuF-ed-azu" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="o1s-Pa-NF8"/>
+                            <constraint firstItem="uuF-ed-azu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="q0G-I7-Lxf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="uuF-ed-azu" id="KMK-Vx-tOO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="138.91625615763547"/>
         </scene>
     </scenes>
 </document>
