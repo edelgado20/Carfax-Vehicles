@@ -104,8 +104,8 @@
                         <constraints>
                             <constraint firstItem="uuF-ed-azu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6d2-Li-ocy"/>
                             <constraint firstAttribute="trailing" secondItem="uuF-ed-azu" secondAttribute="trailing" id="o0V-5S-L2N"/>
-                            <constraint firstItem="uuF-ed-azu" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="o1s-Pa-NF8"/>
                             <constraint firstItem="uuF-ed-azu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="q0G-I7-Lxf"/>
+                            <constraint firstItem="uuF-ed-azu" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="rcR-Fa-UNc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

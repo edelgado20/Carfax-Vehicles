@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3F68FF9722CAEACF007B857C /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F68FF9622CAEACF007B857C /* CarTableViewCell.swift */; };
+		3F68FF9E22CC2CDA007B857C /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F68FF9D22CC2CDA007B857C /* Client.swift */; };
+		3F68FFA222CC2E3A007B857C /* ListingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F68FFA122CC2E3A007B857C /* ListingPage.swift */; };
 		3FB46FAB22CAA5D200BAD38F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB46FAA22CAA5D200BAD38F /* AppDelegate.swift */; };
 		3FB46FAD22CAA5D200BAD38F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB46FAC22CAA5D200BAD38F /* ViewController.swift */; };
 		3FB46FB022CAA5D200BAD38F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FB46FAE22CAA5D200BAD38F /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 
 /* Begin PBXFileReference section */
 		3F68FF9622CAEACF007B857C /* CarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTableViewCell.swift; sourceTree = "<group>"; };
+		3F68FF9D22CC2CDA007B857C /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		3F68FFA122CC2E3A007B857C /* ListingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPage.swift; sourceTree = "<group>"; };
 		3FB46FA722CAA5D200BAD38F /* Carfax Vehicles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Carfax Vehicles.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FB46FAA22CAA5D200BAD38F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FB46FAC22CAA5D200BAD38F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 				3FB46FB322CAA5D400BAD38F /* LaunchScreen.storyboard */,
 				3FB46FB622CAA5D400BAD38F /* Info.plist */,
 				3F68FF9622CAEACF007B857C /* CarTableViewCell.swift */,
+				3F68FF9D22CC2CDA007B857C /* Client.swift */,
+				3F68FFA122CC2E3A007B857C /* ListingPage.swift */,
 			);
 			path = "Carfax Vehicles";
 			sourceTree = "<group>";
@@ -138,8 +144,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F68FFA222CC2E3A007B857C /* ListingPage.swift in Sources */,
 				3FB46FAD22CAA5D200BAD38F /* ViewController.swift in Sources */,
 				3FB46FAB22CAA5D200BAD38F /* AppDelegate.swift in Sources */,
+				3F68FF9E22CC2CDA007B857C /* Client.swift in Sources */,
 				3F68FF9722CAEACF007B857C /* CarTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
