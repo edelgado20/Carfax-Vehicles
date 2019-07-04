@@ -23,7 +23,9 @@ class CachingImageView: UIImageView {
         
         Client.shared.fetch(from: url) { (data, _) in
             defer {
-                self.imageByURL[url] = self.image
+                DispatchQueue.main.async {
+                    self.imageByURL[url] = self.image
+                }
             }
             guard let data = data else {
                 self.image = nil
@@ -31,7 +33,9 @@ class CachingImageView: UIImageView {
             }
             
             let image = UIImage(data: data)
-            self.image = image
+            DispatchQueue.main.async {
+                self.image = image
+            }
         }
         
     }

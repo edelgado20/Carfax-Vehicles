@@ -37,7 +37,6 @@ class ViewController: UIViewController {
             
             do {
                 let results = try JSONDecoder().decode(ListingPage.self, from: data)
-                print(results)
                 self.carListings = results.listings
             } catch {
                 print(error)
@@ -55,9 +54,11 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CarTableViewCell
         let listing = carListings[indexPath.row]
-        //let imageURL = URL(string: listing.images?.firstPhoto.large)
-        //print("URL: \(String(describing: imageURL))")
-        //cell.carImageView.setImage(with: )
+        if let urlString = listing.images?.firstPhoto.large {
+            let imageURL = URL(string: urlString)
+            cell.carImageView.setImage(with: imageURL)
+        }
+        
         cell.carName.text = "\(listing.year) \(listing.make) \(listing.model) \(listing.trim)"
         cell.carPrice.text = "$\(listing.listPrice)"
         cell.carMileage.text = "\(listing.mileage) Mi"
