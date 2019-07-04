@@ -9,7 +9,6 @@
 import UIKit
 
 class CachingImageView: UIImageView {
-    var imageByURL = [URL: UIImage]()
     
     func setImage(with url: URL?) {
         guard let url = url else {
@@ -17,14 +16,14 @@ class CachingImageView: UIImageView {
             return
         }
         
-        if let image = imageByURL[url] {
+        if let image = AssetManager.shared.imageByURL[url] {
             self.image = image
         }
         
         Client.shared.fetch(from: url) { (data, _) in
             defer {
                 DispatchQueue.main.async {
-                    self.imageByURL[url] = self.image
+                    AssetManager.shared.imageByURL[url] = self.image
                 }
             }
             guard let data = data else {
@@ -37,7 +36,6 @@ class CachingImageView: UIImageView {
                 self.image = image
             }
         }
-        
     }
     
 }
