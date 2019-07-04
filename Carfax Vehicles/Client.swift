@@ -6,7 +6,7 @@
 //  Copyright © 2019 Edgar Delgado. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class Client {
     
@@ -19,17 +19,19 @@ class Client {
     
     func fetch(from url: URL, completion: @escaping (Data?, FetchError?) -> Void) {
         URLSession.shared.dataTask(with: url) { (data, _, error) in
-            if error != nil {
-                print(error!)
-                completion(nil, .unknown)
-            }
-            
-            guard let data = data else {
-                completion(nil, .noData)
-                return
-            }
-            
-            completion(data, nil)
+            //DispatchQueue.main.async {
+                if error != nil {
+                    print(error!)
+                    completion(nil, .unknown)
+                }
+                
+                guard let data = data else {
+                    completion(nil, .noData)
+                    return
+                }
+                
+                completion(data, nil)
+            //}
         }.resume()
     }
     

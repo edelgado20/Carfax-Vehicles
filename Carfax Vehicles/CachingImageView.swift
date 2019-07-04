@@ -26,6 +26,7 @@ class CachingImageView: UIImageView {
                     AssetManager.shared.imageByURL[url] = self.image
                 }
             }
+            
             guard let data = data else {
                 self.image = nil
                 return

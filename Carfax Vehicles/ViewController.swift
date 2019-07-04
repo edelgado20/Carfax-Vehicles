@@ -14,16 +14,8 @@ class ViewController: UIViewController {
     let url = URL(string: "https://carfax-for-consumers.firebaseio.com/assignment.json")!
     var carListings = [Listing]()
     
-//    var cars = [UIImage(named: "camaro"), UIImage(named: "wrx"), UIImage(named: "silverado")]
-//    var carNames = ["2014 Chevrolet Camaro SS", "2015 Subaru WRX STI", "2016 Chevrolet Silverado Z71"]
-//    var carPrice = ["15,283", "23,234", "29,321"]
-//    var carMileage = ["100k", "123k", "23k"]
-//    var carLocation = ["Fredricksburg, VA", "Santa Ana, CA", "St Louis, MO"]
-//    var carDealerPhoneNumber = ["(714)243-3423", "(434)424-2342", "(243)423-2432"]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         Client.shared.fetch(from: url) { (data, error) in
             defer {
                 DispatchQueue.main.async {
