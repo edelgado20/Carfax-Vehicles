@@ -10,12 +10,14 @@ import Foundation
 
 class Client {
     
+    static var shared = Client()
+    
     enum FetchError: Error {
         case noData
         case unknown
     }
     
-    func fetchCarListings(from url: URL, completion: @escaping (Data?, FetchError?) -> Void) {
+    func fetch(from url: URL, completion: @escaping (Data?, FetchError?) -> Void) {
         URLSession.shared.dataTask(with: url) { (data, _, error) in
             if error != nil {
                 print(error!)

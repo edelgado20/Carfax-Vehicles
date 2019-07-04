@@ -9,7 +9,7 @@
 import UIKit
 
 class CarTableViewCell: UITableViewCell {
-    @IBOutlet weak var carImageView: UIImageView!
+    @IBOutlet weak var carImageView: CachingImageView!
     @IBOutlet weak var carName: UILabel!
     @IBOutlet weak var carPrice: UILabel!
     @IBOutlet weak var carMileage: UILabel!
