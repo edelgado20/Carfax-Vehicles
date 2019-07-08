@@ -16,6 +16,7 @@ class CarTableViewCell: UITableViewCell {
     @IBOutlet weak var carLocation: UILabel!
     @IBOutlet weak var phoneNumberButton: UIButton!
     static let reuseIdentifier: String = "cell"
+    var phoneNumber: String?
     
     func configure(with listing: Listing) {
         AssetManager.shared.image(for: listing.images?.firstPhoto.large) { [weak self] (result) in
@@ -38,12 +39,12 @@ class CarTableViewCell: UITableViewCell {
         carPrice.text = "$\(listing.listPrice)"
         carMileage.text = "\(listing.mileage/1000)K Mi"
         carLocation.text = "\(listing.dealer.city), \(listing.dealer.state)"
-        phoneNumberButton.setTitle(listing.dealer.phone, for: .normal)
+        phoneNumber = listing.dealer.phone
+        phoneNumberButton.setTitle(format(phoneNumber: listing.dealer.phone), for: .normal)
     }
     
     @IBAction func makePhoneCall(_ sender: Any) {
-        
-        guard let number = phoneNumberButton.titleLabel?.text else { return }
+        guard let number = phoneNumber else { return }
         
         if let phoneCallURL = URL(string: "tel://\(number)") {
             let application: UIApplication = UIApplication.shared
@@ -55,5 +56,47 @@ class CarTableViewCell: UITableViewCell {
                 }
             }
         }
+    }
+    
+    func format(phoneNumber sourcePhoneNumber: String) -> String? {
+        var sourceIndex = 0
+        
+        // Area code
+        var areaCode = ""
+        let areaCodeLength = 3
+        guard let areaCodeSubstring = sourcePhoneNumber.substring(start: sourceIndex, offsetBy: areaCodeLength) else {
+            return nil
+        }
+        areaCode = String(format: "(%@) ", areaCodeSubstring)
+        sourceIndex += areaCodeLength
+        
+        // Prefix, 3 characters
+        let prefixLength = 3
+        guard let prefix = sourcePhoneNumber.substring(start: sourceIndex, offsetBy: prefixLength) else {
+            return nil
+        }
+        sourceIndex += prefixLength
+        
+        // Suffix, 4 characters
+        let suffixLength = 4
+        guard let suffix = sourcePhoneNumber.substring(start: sourceIndex, offsetBy: suffixLength) else {
+            return nil
+        }
+        
+        return areaCode + prefix + "-" + suffix
+    }
+}
+
+extension String {
+    internal func substring(start: Int, offsetBy: Int) -> String? {
+        guard let substringStartIndex = self.index(startIndex, offsetBy: start, limitedBy: endIndex) else {
+            return nil
+        }
+        
+        guard let substringEndIndex = self.index(startIndex, offsetBy: start + offsetBy, limitedBy: endIndex) else {
+            return nil
+        }
+        
+        return String(self[substringStartIndex ..< substringEndIndex])
     }
 }
