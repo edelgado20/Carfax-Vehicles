@@ -71,7 +71,10 @@
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x3m-vp-IeJ">
                                                             <rect key="frame" x="0.0" y="107.66666666666667" width="335" height="28.000000000000014"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                            <state key="normal" title="(714)979-3030"/>
+                                                            <state key="normal" title="714-979-3030"/>
+                                                            <connections>
+                                                                <action selector="makePhoneCall:" destination="Poz-kz-Y8m" eventType="touchUpInside" id="6Pj-mZ-uP9"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>

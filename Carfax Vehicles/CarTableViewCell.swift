@@ -33,10 +33,30 @@ class CarTableViewCell: UITableViewCell {
             }
         }
         
-        carName.text = "\(listing.year) \(listing.make) \(listing.model) \(listing.trim)"
+        let trim = listing.trim == "Unspecified" ? "" : listing.trim
+        carName.text = "\(listing.year) \(listing.make) \(listing.model) \(trim)"
         carPrice.text = "$\(listing.listPrice)"
         carMileage.text = "\(listing.mileage) Mi"
         carLocation.text = "\(listing.dealer.city), \(listing.dealer.state)"
+        phoneNumberButton.setTitle(listing.dealer.phone, for: .normal)
     }
     
+    @IBAction func makePhoneCall(_ sender: Any) {
+        
+        guard let number = phoneNumberButton.titleLabel?.text else { return }
+        
+        if let phoneCallURL = URL(string: "tel://\(number)") {
+            print("Inside if")
+            let application: UIApplication = UIApplication.shared
+            if application.canOpenURL(phoneCallURL) {
+                if #available(iOS 10.0, *) {
+                    print("IF")
+                    application.open(phoneCallURL, options: [:], completionHandler: nil)
+                } else {
+                    print("ELSE")
+                    application.openURL(phoneCallURL as URL)
+                }
+            }
+        }
+    }
 }
