@@ -29,13 +29,7 @@ struct Listing: Codable {
 struct Dealer: Codable {
     let city: String
     let phone: String
-    let state: State
-}
-
-enum State: String, Codable {
-    case az = "AZ"
-    case ca = "CA"
-    case nj = "NJ"
+    let state: String
 }
 
 // MARK: - Images
@@ -52,5 +46,5 @@ struct Images: Codable {
 
 // MARK: - FirstPhoto
 struct FirstPhoto: Codable {
-    let large, medium, small: String
+    let large, medium, small: URL?
 }
