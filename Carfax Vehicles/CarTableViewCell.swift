@@ -36,7 +36,7 @@ class CarTableViewCell: UITableViewCell {
         let trim = listing.trim == "Unspecified" ? "" : listing.trim
         carName.text = "\(listing.year) \(listing.make) \(listing.model) \(trim)"
         carPrice.text = "$\(listing.listPrice)"
-        carMileage.text = "\(listing.mileage) Mi"
+        carMileage.text = "\(listing.mileage/1000)K Mi"
         carLocation.text = "\(listing.dealer.city), \(listing.dealer.state)"
         phoneNumberButton.setTitle(listing.dealer.phone, for: .normal)
     }
