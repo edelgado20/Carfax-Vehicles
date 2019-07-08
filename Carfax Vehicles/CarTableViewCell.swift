@@ -46,14 +46,11 @@ class CarTableViewCell: UITableViewCell {
         guard let number = phoneNumberButton.titleLabel?.text else { return }
         
         if let phoneCallURL = URL(string: "tel://\(number)") {
-            print("Inside if")
             let application: UIApplication = UIApplication.shared
             if application.canOpenURL(phoneCallURL) {
                 if #available(iOS 10.0, *) {
-                    print("IF")
                     application.open(phoneCallURL, options: [:], completionHandler: nil)
                 } else {
-                    print("ELSE")
                     application.openURL(phoneCallURL as URL)
                 }
             }
