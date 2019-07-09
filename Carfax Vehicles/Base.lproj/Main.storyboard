@@ -33,49 +33,49 @@
                                                     <rect key="frame" x="20" y="20" width="335" height="135.66666666666666"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="camaro" translatesAutoresizingMaskIntoConstraints="NO" id="8JI-cU-K7H">
-                                                            <rect key="frame" x="0.0" y="0.0" width="335" height="0.0"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="335" height="67.666666666666671"/>
                                                             <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" secondItem="8JI-cU-K7H" secondAttribute="height" multiplier="4:3" id="5XS-Za-8Nd"/>
+                                                                <constraint firstAttribute="width" secondItem="8JI-cU-K7H" secondAttribute="height" multiplier="4:3" priority="750" id="5XS-Za-8Nd"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2014 Acura ILX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owm-kk-YKA">
-                                                            <rect key="frame" x="0.0" y="5.9999999999999991" width="335" height="15.666666666666664"/>
+                                                            <rect key="frame" x="0.0" y="73.666666666666671" width="335" height="0.0"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CTS-FP-YCz">
-                                                            <rect key="frame" x="0.0" y="27.666666666666657" width="335" height="74"/>
+                                                            <rect key="frame" x="0.0" y="79.666666666666671" width="335" height="50.000000000000014"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$28,495" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ctP-kY-pbq">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="52.333333333333336" height="74"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="52.333333333333336" height="50"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IfS-vI-Vjb">
-                                                                    <rect key="frame" x="62.333333333333329" y="0.0" width="48" height="74"/>
+                                                                <view contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="IfS-vI-Vjb">
+                                                                    <rect key="frame" x="62.333333333333329" y="0.0" width="50" height="50"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" constant="1" id="ZYr-hq-23X"/>
+                                                                        <constraint firstAttribute="width" priority="750" constant="1" id="ZYr-hq-23X"/>
                                                                     </constraints>
                                                                 </view>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100k Mi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sHe-xF-CH2">
-                                                                    <rect key="frame" x="120.33333333333334" y="0.0" width="45" height="74"/>
+                                                                    <rect key="frame" x="122.33333333333333" y="0.0" width="45.333333333333329" height="50"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ara-uM-aj7">
-                                                                    <rect key="frame" x="175.33333333333334" y="0.0" width="48" height="74"/>
+                                                                    <rect key="frame" x="177.66666666666666" y="0.0" width="47.666666666666657" height="50"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" constant="1" id="37T-YA-zgT"/>
+                                                                        <constraint firstAttribute="width" priority="750" constant="1" id="37T-YA-zgT"/>
                                                                     </constraints>
                                                                 </view>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fredricksburg, VA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kB7-rb-OaC">
-                                                                    <rect key="frame" x="233.33333333333334" y="0.0" width="101.66666666666666" height="74"/>
+                                                                    <rect key="frame" x="235.33333333333334" y="0.0" width="99.666666666666657" height="50"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -87,7 +87,7 @@
                                                             </constraints>
                                                         </stackView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x3m-vp-IeJ">
-                                                            <rect key="frame" x="0.0" y="107.66666666666667" width="335" height="28.000000000000014"/>
+                                                            <rect key="frame" x="0.0" y="135.66666666666666" width="335" height="0.0"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                             <state key="normal" title="714-979-3030"/>
                                                             <connections>
